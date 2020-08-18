@@ -1,0 +1,26 @@
+body {
+	font-family: sans-serif;
+}
+
+/* data table */
+.data_table{
+    width:100%;
+    border-collapse:collapse;
+}
+.data_table td, .data_table th
+{
+    font-size:12px;
+    border:1px solid #000;
+    padding:3px 7px 2px 7px;
+}
+.data_table th
+{
+    font-size:13px;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:#585858;
+    color:#fff;
+    width: 80px;
+    white-space:nowrap;
+}
