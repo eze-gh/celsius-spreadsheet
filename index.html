@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>Celsius-Spreadsheet</title>
+<title>Celsius-Watch</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css' type='text/css' />
 <link rel='stylesheet' href='https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css' type='text/css' />
 <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css' />
@@ -80,7 +80,7 @@
 $(document).ready( function () {
     $('.data_table').DataTable({		
 	    dom: 'Bfrtip',
-        buttons: ['copy', 'excelHtml5', 'colvis', 'pageLength'],
+        buttons: ['colvis', 'pageLength'],
 		lengthMenu: [[50, 100, -1], ['50', '100', 'All']],	
 		'order': [[ 0, "asc" ]],
 		fixedHeader: false,
@@ -112,7 +112,7 @@ $(document).ready( function () {
 
 <div style='margin: 0 auto; position: relative;'>
 <div class='draggable' style='width: 500px; position: absolute; top: 3px; left: 5px;'>
-This Celsius-Spreadsheet web page is made possible by and gives thanks
+This web page is made possible by and gives thanks
 to the following data source providers:
 <ul style='margin-top: 5px;'>
 <li><a href='https://celsians.com/'>Celsians</a></li>
