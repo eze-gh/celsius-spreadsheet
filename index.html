@@ -105,12 +105,25 @@ $(document).ready( function () {
 	});
 	
 	$(document).on('click','#first_of_month_only',function(){
-		$.fn.dataTable.ext.search.push(
-		   function(settings, data, dataIndex) {
-			  return $(table.row(dataIndex).node()).attr('data-day') == 1;
-		   }
-		);
-		table.draw();
+		
+		var span_text = $("#first_of_month_only").text();
+		
+		if (span_text == "Show First of Month Only")
+		{		
+			$.fn.dataTable.ext.search.push(
+			   function(settings, data, dataIndex) {
+				  return $(table.row(dataIndex).node()).attr('data-day') == 1;
+			   }
+			);
+			table.draw();
+			$("#first_of_month_only").text("Show All");
+		}
+		else
+		{
+			$.fn.dataTable.ext.search.pop();
+			table.draw();			
+			$("#first_of_month_only").text("Show First of Month Only");
+		}
 	});	
 
 	
